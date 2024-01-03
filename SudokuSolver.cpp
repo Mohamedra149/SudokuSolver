@@ -1,6 +1,8 @@
 
 #include "SudokuSolver.h"
 
+
+// checking square
 bool isValidBox(vector<vector<char>>& board ,int i ,int j)
 {
     unordered_set <char> hash;
@@ -20,6 +22,7 @@ bool isValidBox(vector<vector<char>>& board ,int i ,int j)
     }
     return true;
 }
+// checking row
 bool isValidRow(vector<vector<char>>& board ,int i)
 {
     unordered_set <char> hash;
@@ -34,6 +37,7 @@ bool isValidRow(vector<vector<char>>& board ,int i)
     }
     return true;
 }
+// checking col
 bool isValidCol(vector<vector<char>>& board ,int j)
 {
     unordered_set <char> hash;
@@ -48,6 +52,7 @@ bool isValidCol(vector<vector<char>>& board ,int j)
     }
     return true;
 }
+
 static bool Aux(vector<vector<char>>& board)
 {
     for(int i=0 ; i<board.size();i++)
